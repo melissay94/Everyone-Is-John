@@ -41,37 +41,46 @@ public class JohnNetwork : NetworkManager {
 		Debug.Log ("Successful Server");
 	}
 
-
 	// Behaviors for the GUI objects
-	void OnGUI() {
-		// Create all the login buttons
-		hostButton = GameObject.Find("HostButton").GetComponent<Button>();
-		joinList = GameObject.Find ("Games Available").GetComponent<Text> ();
-		refreshButton = GameObject.Find ("RefreshButton").GetComponent<Button> ();
+    void OnGUI()
+    {
+        if (GameObject.Find("HostButton") != null) {
+            print("SetupLoginSceneButtons");
+            // Create all the login buttons
+		    hostButton = GameObject.Find("HostButton").GetComponent<Button>();
+		    joinList = GameObject.Find ("Games Available").GetComponent<Text> ();
+		    refreshButton = GameObject.Find ("RefreshButton").GetComponent<Button> ();
 
-		// Default all the buttons to no listeners
-		hostButton.onClick.RemoveAllListeners();
-		refreshButton.onClick.RemoveAllListeners ();
+		    // Default all the buttons to no listeners
+		    hostButton.onClick.RemoveAllListeners();
+		    refreshButton.onClick.RemoveAllListeners ();
 
-		// Add methods to all the buttons
-		hostButton.onClick.AddListener (StartServer);
-		refreshButton.onClick.AddListener (RefreshHostInfo);
+		    // Add methods to all the buttons
+		    hostButton.onClick.AddListener (StartServer);
+		    refreshButton.onClick.AddListener (RefreshHostInfo);
 
-		if (Network.isClient || Network.isServer) {
-			hostButton.enabled = false;
-			hostButton.GetComponentInChildren<CanvasRenderer>().SetAlpha(0);
-			hostButton.GetComponentInChildren<Text>().color = Color.clear;
-		}
+		    if (Network.isClient || Network.isServer) {
+			    hostButton.enabled = false;
+			    hostButton.GetComponentInChildren<CanvasRenderer>().SetAlpha(0);
+			    hostButton.GetComponentInChildren<Text>().color = Color.clear;
+		    }
 
-		if (hostInfo != null && !Network.isServer) {
-			joinList.text = "Games Available: " + hostInfo.Length;
+		    if (hostInfo != null && !Network.isServer) {
+			    joinList.text = "Games Available: " + hostInfo.Length;
 
-			for (int i = 0; i < hostInfo.Length; i++) {
-				if (GUI.Button(new Rect(joinList.transform.position.x - 100, joinList.transform.position.y + (150 * (i + 1)), 200, 50), hostInfo[i].gameName + " " + (i + 1))) {
-					JoinServer(hostInfo[i]);	
-				}
-			}
-		}
+			    for (int i = 0; i < hostInfo.Length; i++) {
+				    if (GUI.Button(new Rect(joinList.transform.position.x - 100, joinList.transform.position.y + (150 * (i + 1)), 200, 50), hostInfo[i].gameName + " " + (i + 1))) {
+					    JoinServer(hostInfo[i]);	
+				    }
+			    }
+		    }
+        }
+        else if (GameObject.Find("btnDisconnect") != null)
+        {
+            print("SetupChatSceneButtons");
+            GameObject.Find("btnDisconnect").GetComponent<Button>().onClick.RemoveAllListeners();
+            GameObject.Find("btnDisconnect").GetComponent<Button>().onClick.AddListener(NetworkManager.singleton.StopHost);
+        }
 	}
 
 	// Once triggered, stores the host information
