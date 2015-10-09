@@ -18,6 +18,7 @@ public class Chat : NetworkBehaviour
 	[SerializeField]
 	InputField
 		chatInput;
+
 	[SerializeField]
 	Text
 		chatWindow;
@@ -40,6 +41,7 @@ public class Chat : NetworkBehaviour
 
         // Assign Random Username
         username = "Player "+Random.Range(1, 100);
+
 	}
 
 	public override void OnStartClient ()
