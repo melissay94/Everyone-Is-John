@@ -186,7 +186,8 @@ namespace UnityStandardAssets.Network
 
 			LobbyPlayer newPlayer = obj.GetComponent<LobbyPlayer> ();
 			//numPlayers is in NetworkManager
-			newPlayer.RpcToggleJoinButton (true);
+			newPlayer.RpcToggleJoinButton (numPlayers >= minPlayers);
+			Debug.Log ("Minimum: " + minPlayers + " Number of Players: " + numPlayers);
 
 			for (int i = 0; i < numPlayers; ++i) {
 				LobbyPlayer p = lobbySlots [i] as LobbyPlayer;
