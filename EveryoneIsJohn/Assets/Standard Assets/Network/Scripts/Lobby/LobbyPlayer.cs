@@ -64,6 +64,7 @@ namespace UnityStandardAssets.Network
 			base.OnClientEnterLobby ();
 
 			LobbyPlayerList._instance.AddPlayer (this);
+			Debug.Log ("Client added");
 			LobbyPlayerList._instance.DisplayDirectServerWarning (isServer && LobbyManager.s_Singleton.matchMaker == null);
 
 			//if we return from a game, color of text can still be the one for "Ready"
@@ -116,7 +117,7 @@ namespace UnityStandardAssets.Network
 
 			ChangeReadyButtonColor (JoinColor);
 
-			readyButton.transform.GetChild (0).GetComponent<Text> ().text = "JOIN";
+			readyButton.transform.GetChild (0).GetComponent<Text> ().text = "Join";
 			readyButton.interactable = true;
 		}
 
@@ -131,6 +132,7 @@ namespace UnityStandardAssets.Network
 			//have to use child count of player prefab already setup as "this.slot" is not set yet
 			if (playerName == "")
 				CmdNameChanged ("Player" + LobbyPlayerList._instance.playerListContentTransform.childCount);
+			Debug.Log (LobbyPlayerList._instance.playerListContentTransform.childCount);
 
 			//we switch from simple name display to name input
            

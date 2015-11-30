@@ -25,7 +25,6 @@ namespace UnityStandardAssets.Network
 		public void OnClickHost ()
 		{
 			lobbyManager.StartHost ();
-			Debug.Log ("Host started");
 		}
 
 
@@ -41,7 +40,10 @@ namespace UnityStandardAssets.Network
 
 			lobbyManager.SetServerInfo ("Connecting...", lobbyManager.networkAddress);
 		}
-		
+
+       
+
+      
 
 		void onEndEditIP (string text)
 		{
