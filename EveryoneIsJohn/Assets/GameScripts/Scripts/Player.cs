@@ -8,10 +8,14 @@ public class Player : MonoBehaviour {
 	public Skill skill1;
 	public Skill skill2;
 	public Skill skill3;
-	public Obsession obsession;
+	public Obsession obsession1;
+	public Obsession obsession2;
+	public Obsession obsession3;
+
+	public Color color;
+	public string username;
 
 	public Player () {
-		willpower = 10;
 	}
 
 	// Update is called once per frame
