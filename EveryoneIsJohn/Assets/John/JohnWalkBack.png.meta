@@ -1,9 +1,17 @@
 fileFormatVersion: 2
 guid: d09884aaa2d5bad4994d71d447852a50
-timeCreated: 1447369725
+timeCreated: 1449253725
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: JohnWalkBack_0
+    21300002: JohnWalkBack_1
+    21300004: JohnWalkBack_2
+    21300006: JohnWalkBack_3
+    21300008: JohnWalkBack_4
+    21300010: JohnWalkBack_5
+    21300012: JohnWalkBack_6
+    21300014: JohnWalkBack_7
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,14 +38,14 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -48,7 +56,87 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: JohnWalkBack_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 2
+        width: 38
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: JohnWalkBack_1
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 2
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: JohnWalkBack_2
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 2
+        width: 39
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: JohnWalkBack_3
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 2
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: JohnWalkBack_4
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 2
+        width: 38
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: JohnWalkBack_5
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 2
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: JohnWalkBack_6
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 2
+        width: 39
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: JohnWalkBack_7
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 2
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 
