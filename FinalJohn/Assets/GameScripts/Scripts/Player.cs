@@ -37,17 +37,20 @@ public class Player : MonoBehaviour {
 			animator.SetInteger("Direction", 1);
 			transform.position += Vector3.up * speed * Time.deltaTime;
 		}
-		if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) {
+		else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) {
 			animator.SetInteger("Direction", 0);
 			transform.position += Vector3.right * speed * Time.deltaTime;
 		}
-		if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) {
+		else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) {
 			animator.SetInteger("Direction", 3);
 			transform.position += Vector3.down * speed * Time.deltaTime;
 		}
-		if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) {
+		else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) {
 			animator.SetInteger("Direction", 2);
 			transform.position += Vector3.left * speed * Time.deltaTime;
+		}
+		else {
+			animator.SetInteger("Direction", 4);
 		}
 	}
 }

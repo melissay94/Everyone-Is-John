@@ -20,19 +20,24 @@ public class PlayerController : MonoBehaviour {
 			transform.position += Vector3.up * speed * Time.deltaTime;
 		}
 		// Goes Right
-		if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) {
+		else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) {
 			animator.SetInteger("Direction", 0);
 			transform.position += Vector3.right * speed * Time.deltaTime;
 		}
 		// Goes Down
-		if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) {
+		else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) {
 			animator.SetInteger("Direction", 3);
 			transform.position += Vector3.down * speed * Time.deltaTime;
 		}
 		//Goes Left
-		if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) {
+		else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) {
 			animator.SetInteger("Direction", 2);
 			transform.position += Vector3.left * speed * Time.deltaTime;
+		}
+		//if (!Input.anyKey) {
+		else{
+			Debug.Log("should be nothin here now");
+			animator.SetInteger("Direction", 4);
 		}
 	}
 }
