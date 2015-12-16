@@ -5,7 +5,7 @@ public class InteractableObject : MonoBehaviour {
 	
 	public int type;
 	string desc;
-	Action[] actions;
+	public Action[] actions;
 
 	// Use this for initialization
 	void Start () {

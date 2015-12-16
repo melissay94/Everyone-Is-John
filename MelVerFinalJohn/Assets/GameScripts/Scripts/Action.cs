@@ -5,7 +5,11 @@ public class Action {
 
 	string desc;
 	int type;
-	
+
+	public string GetDesc() {
+		return desc;
+	}
+
 	public Action (int t) {
 		
 		type = t;
